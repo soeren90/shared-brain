@@ -87,8 +87,10 @@ sync is never allowed to rewrite the rules it runs under.
 
 ## The bodies (separate repos)
 
-- **Always-on server agent** — runs scheduled operations and a chat frontend, 24/7.
-- **Local orchestrator** — a conductor agent delegating to a fleet of specialists.
+- **[`hermes-agent`](https://github.com/soeren90/hermes-agent)** — an always-on
+  server agent running scheduled operations and a chat frontend, 24/7.
+- **[`larry`](https://github.com/soeren90/larry)** — a local orchestrator
+  delegating to a fleet of specialist sub-agents.
 
 Both read this brain; neither owns it.
 
