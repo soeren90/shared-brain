@@ -95,6 +95,8 @@ sync is never allowed to rewrite the rules it runs under.
 
 Both read this brain; neither owns it. The brain outlives any single body:
 when one is retired or replaced, the memory and skills stay where they are.
+That has already happened once: when the always-on server agent was replaced by
+a locally running one for security reasons, the brain moved over unchanged.
 
 ---
 
