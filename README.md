@@ -88,11 +88,13 @@ sync is never allowed to rewrite the rules it runs under.
 ## The bodies (separate repos)
 
 - **[`hermes-agent`](https://github.com/soeren90/hermes-agent)**: an always-on
-  server agent running scheduled operations and a chat frontend, 24/7.
+  server agent that ran scheduled operations and a chat frontend around the
+  clock, in daily use from summer to autumn 2026.
 - **[`larry`](https://github.com/soeren90/larry)**: a local orchestrator
   delegating to a fleet of specialist sub-agents.
 
-Both read this brain; neither owns it.
+Both read this brain; neither owns it. The brain outlives any single body:
+when one is retired or replaced, the memory and skills stay where they are.
 
 ---
 
