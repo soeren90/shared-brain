@@ -2,7 +2,7 @@
 
 `memory/` is a folder of plain Markdown files that every body reads before a
 task and writes to after. It doubles as a personal knowledge base (openable in
-any notes app). No database, no embeddings — and at this scale, none needed.
+any notes app). No database, no embeddings, and at this scale none needed.
 
 ## Why plain Markdown
 
@@ -33,21 +33,21 @@ The four types:
 
 | Type | Holds |
 | --- | --- |
-| `user` | who the operator is — role, preferences, working style |
+| `user` | who the operator is: role, preferences, working style |
 | `feedback` | guidance on *how* the system should work, with the reasoning |
 | `project` | ongoing work and constraints not derivable from the data |
 | `reference` | pointers to external resources |
 
 ## The index
 
-A single index file is loaded every session — one line per memory, a title and
+A single index file is loaded every session: one line per memory, a title and
 a hook. It's the map of what the system knows, so a body can decide what to pull
 before acting. The index never holds memory *content*, only pointers.
 
 ## Read before, write after
 
 - **Before** a task: pull the notes relevant to it.
-- **After** a task: write down what was learned — a customer fact, a project
+- **After** a task: write down what was learned: a customer fact, a project
   constraint, a corrected preference.
 - **Before saving:** check for an existing file that already covers it and
   update that, rather than creating a duplicate.
@@ -55,14 +55,14 @@ before acting. The index never holds memory *content*, only pointers.
 ## Hard rules
 
 - **No secrets.** No passwords, credentials, or payment data, ever. This is
-  enforced by a secret scan in the sync path, not just asked for — see
+  enforced by a secret scan in the sync path, not just asked for; see
   [syncing-across-hosts.md](syncing-across-hosts.md).
 - **Append-only on wired paths.** Some folders are referenced by scripts;
   maintenance consolidates additively and never renames or moves them.
 - **Facts, not transcripts.** If something only mattered to one conversation, it
   doesn't belong here.
 - **Only confirmed facts.** A fact enters memory because the operator confirmed
-  it — not because an agent inferred it from untrusted content. This is the
+  it, not because an agent inferred it from untrusted content. This is the
   first line of defense against memory poisoning (see Security by design in
   [../ARCHITECTURE.md](../ARCHITECTURE.md)).
 
@@ -80,6 +80,6 @@ pages), memory is a poisoning target. Two rules keep it clean:
 
 ## Maintenance
 
-A monthly job consolidates memory — merges duplicates, flags stale facts, fixes
-dead links, closes index gaps. Cosmetic and unambiguous fixes happen directly;
+A regular maintenance pass consolidates memory: it merges duplicates, flags stale
+facts, fixes dead links and closes index gaps. Cosmetic and unambiguous fixes happen directly;
 anything that changes meaning is written as a proposal for human approval.
